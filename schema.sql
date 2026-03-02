@@ -1,5 +1,5 @@
-# Table	Create Table
-protected_areas	CREATE TABLE `protected_areas` (
+--Table	Create Table protected_areas	
+CREATE TABLE `protected_areas` (
   `area_id` int NOT NULL AUTO_INCREMENT,
   `area_name` varchar(150) DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL,
@@ -9,8 +9,8 @@ protected_areas	CREATE TABLE `protected_areas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
 
-# Table	Create Table
-animals	CREATE TABLE `animals` (
+--Table	Create Table animals
+CREATE TABLE `animals` (
   `animal_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `species` varchar(100) DEFAULT NULL,
@@ -23,8 +23,8 @@ animals	CREATE TABLE `animals` (
   CONSTRAINT `animals_ibfk_1` FOREIGN KEY (`protected_area_id`) REFERENCES `protected_areas` (`area_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-# Table	Create Table
-rangers	CREATE TABLE `rangers` (
+--Table	Create Table rangers
+CREATE TABLE `rangers` (
   `ranger_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `years_experience` int DEFAULT NULL,
@@ -35,8 +35,8 @@ rangers	CREATE TABLE `rangers` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
 
-# Table	Create Table
-gps_tracking	CREATE TABLE `gps_tracking` (
+-- Table	Create Table gps_tracking
+CREATE TABLE `gps_tracking` (
   `tracking_id` int NOT NULL AUTO_INCREMENT,
   `animal_id` int DEFAULT NULL,
   `latitude` decimal(9,6) DEFAULT NULL,
@@ -48,8 +48,8 @@ gps_tracking	CREATE TABLE `gps_tracking` (
 ) ENGINE=InnoDB AUTO_INCREMENT=285 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
 
-# Table	Create Table
-poaching_incidents	CREATE TABLE `poaching_incidents` (
+-- Table	Create Table poaching_incidents
+CREATE TABLE `poaching_incidents` (
   `incident_id` int NOT NULL AUTO_INCREMENT,
   `area_id` int DEFAULT NULL,
   `incident_date` date DEFAULT NULL,

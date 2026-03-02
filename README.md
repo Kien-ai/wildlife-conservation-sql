@@ -36,7 +36,7 @@ Markdown: Project documentation
 
 1️⃣ Clone the repository:
 
-git clone https://github.com/yourusername/wildlife-conservation-db.git
+git clone https://github.com/Kien-ai/wildlife-conservation-sql.git
 
 2️⃣ Import the schema:
 
